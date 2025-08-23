@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Page 2</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        overflow: hidden;
+        font-family: sans-serif;
+
+        /* Background image with text already on it */
+        background-image: url("picture.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        position: relative;
+    }
+
+    /* Top text (pure crimson red, no box) */
+    .top-text {
+        position: absolute;
+        top: 8%;               /* pushes it down from the top */
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 18px;
+        font-weight: bold;
+        color: crimson;
+        text-align: center;
+        white-space: pre-line; /* allows line breaks with <br> */
+    }
+
+    /* Decorative corner images */
+    .corner-img {
+        position: absolute;
+        width: 200px;   /* adjust size */
+        height: 200px;
+        opacity: 0.9;   /* slightly transparent */
+    }
+
+    .corner-left {
+        top: 15%;   /* adjust vertical position */
+        left: 40px; /* adjust distance from left edge */
+    }
+
+    .corner-right {
+        top: 15%;   /* adjust vertical position */
+        right: 40px; /* adjust distance from right edge */
+    }
+
+    /* Horizontal belt container */
+    .belt {
+        position: absolute;
+        bottom: 40px; /* pushes belt closer to bottom */
+        left: 0;
+        width: 100%;
+        height: 120px; /* smaller belt height */
+        overflow: hidden;
+    }
+
+    /* Scrolling track */
+    .belt-track {
+        display: flex;
+        gap: 25px; /* spacing between images */
+        animation: scrollX 25s linear infinite;
+    }
+
+    .belt-img {
+        width: 200px;   /* wider */
+        height: 120px;  /* smaller height */
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    /* Animation to loop images horizontally */
+    @keyframes scrollX {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-100%); }
+    }
+</style>
+</head>
+<body>
+
+<!-- Top crimson text -->
+<div class="top-text">
+    thank you for blessing our lives cuh and hear me vent most of the time. i hope we play roblox moree again. hoping to seeing yo ass one day.
+
+
+-the annoying guy
+</div>
+
+<!-- Left corner image -->
+<img src="dean.png" alt="Left Corner" class="corner-img corner-left">
+
+<!-- Right corner image -->
+<img src="sam.png" alt="Right Corner" class="corner-img corner-right">
+
+<!-- Belt of looping images -->
+<div class="belt">
+    <div class="belt-track">
+        <img src="deb10.jpeg" class="belt-img">
+        <img src="deb2.jpeg" class="belt-img">
+        <img src="deb3.jpeg" class="belt-img">
+        <img src="deb4.jpeg" class="belt-img">
+        <img src="deb5.jpeg" class="belt-img">
+        <img src="deb6.jpeg" class="belt-img">
+        <img src="deb7.jpeg" class="belt-img">
+	<img src="deb8.jpeg" class="belt-img">
+	<img src="deb9.jpeg" class="belt-img">
+
+        <!-- full duplicate for seamless looping -->
+        <img src="deb10.jpeg" class="belt-img">
+        <img src="deb2.jpeg" class="belt-img">
+        <img src="deb3.jpeg" class="belt-img">
+        <img src="deb4.jpeg" class="belt-img">
+        <img src="deb5.jpeg" class="belt-img">
+        <img src="deb6.jpeg" class="belt-img">
+        <img src="deb7.jpeg" class="belt-img">
+	<img src="deb8.jpeg" class="belt-img">
+	<img src="deb9.jpeg" class="belt-img">
+    </div>
+</div>
+
+</body>
+</html>

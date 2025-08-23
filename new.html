@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Birthday Page</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background: url('debooot.png') no-repeat center center/cover;
+        height: 100vh;
+        overflow: hidden;
+        font-family: sans-serif;
+    }
+
+    /* Left & Right belt containers */
+    .belt-left, .belt-right {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: 170px; /* wider for bigger images */
+        overflow: hidden;
+        pointer-events: none; /* so clicks go through */
+    }
+
+    .belt-left {
+        left: 20px; /* left belt on left */
+    }
+
+    .belt-right {
+        right: -19px; /* right belt on right */
+    }
+
+    .belt-track {
+        display: flex;
+        flex-direction: column;
+        gap: 20px; /* spacing between images */
+        animation: scrollLoop 12s linear infinite;
+    }
+
+    .belt-right .belt-track {
+        animation: scrollLoopReverse 12s linear infinite;
+    }
+
+    /* Image style: bigger rectangle */
+    .belt-img {
+        width: 150px;
+        height: 250px;
+        object-fit: cover;
+        border-radius: 15px;
+    }
+
+    /* Left scroll animation */
+    @keyframes scrollLoop {
+        0% { transform: translateY(-50%); }
+        100% { transform: translateY(0); }
+    }
+
+    /* Right scroll animation (opposite direction) */
+    @keyframes scrollLoopReverse {
+        0% { transform: translateY(0); }
+        100% { transform: translateY(-50%); }
+    }
+
+    /* Invisible hotspot for "next" */
+    .next-hotspot {
+        position: absolute;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90px;
+        height: 90px;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+
+<!-- Left Belt -->
+<div class="belt-left">
+    <div class="belt-track">
+        <img src="ari1.jpg" class="belt-img" alt="Image 1">
+        <img src="ari2.jpg" class="belt-img" alt="Image 2">
+        <img src="ari3.jpg" class="belt-img" alt="Image 3">
+        <img src="ari4.jpeg" class="belt-img" alt="Image 4">
+        <!-- Repeat images to make loop seamless -->
+        <img src="ari1.jpg" class="belt-img" alt="Image 5">
+        <img src="ari2.jpg" class="belt-img" alt="Image 6">
+        <img src="ari3.jpg" class="belt-img" alt="Image 7">
+        <img src="ari4.jpeg" class="belt-img" alt="Image 8">
+    </div>
+</div>
+
+<!-- Right Belt -->
+<div class="belt-right">
+    <div class="belt-track">
+        <img src="bi1.jpg" class="belt-img" alt="Image 1">
+        <img src="bi2.jpg" class="belt-img" alt="Image 2">
+        <img src="bi3.jpeg" class="belt-img" alt="Image 3">
+        <img src="bi4.jpg" class="belt-img" alt="Image 4">
+        <!-- Repeat images for seamless loop -->
+        <img src="bi1.jpg" class="belt-img" alt="Image 5">
+        <img src="bi2.jpg" class="belt-img" alt="Image 6">
+        <img src="bi3.jpeg" class="belt-img" alt="Image 7">
+        <img src="bi4.jpg" class="belt-img" alt="Image 8">
+    </div>
+</div>
+
+<!-- Clickable hotspot -->
+<a href="page-2.html" class="next-hotspot"></a>
+
+</body>
+</html>
